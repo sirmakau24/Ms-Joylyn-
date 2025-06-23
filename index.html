@@ -11,9 +11,117 @@
   <!-- AOS CSS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="MsJoy.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;700&display=swap" rel="stylesheet" />
+
+  <!-- Inline CSS -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+      background-color: #d80d80;
+      padding-top: 56px;
+    }
+
+    .hero {
+      height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    }
+
+    .hero h1 {
+      color: #fff;
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+    }
+
+    .hero h2 {
+      color: #fff;
+      font-family: cursive;
+      font-size: clamp(1rem, 3vw, 2rem);
+    }
+
+    .bg-soft-pink {
+      background-color: #ffe4e1;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-auto-rows: 150px;
+      grid-auto-flow: dense;
+      gap: 1rem;
+    }
+
+    .item-small  { grid-row: span 1; grid-column: span 1; }
+    .item-medium { grid-row: span 2; grid-column: span 1; }
+    .item-large  { grid-row: span 2; grid-column: span 2; }
+
+    .card-image {
+      position: relative;
+      overflow: hidden;
+      border-radius: 0.75rem;
+      transform: rotate(calc((var(--i,0) - 2) * 2deg));
+      transition: transform 0.3s ease;
+    }
+
+    .card-image:hover {
+      transform: scale(1.03) rotate(0);
+    }
+
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 4 / 3;
+      display: block;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      color: #fff;
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.3s ease;
+    }
+
+    .card-image:hover .overlay {
+      opacity: 1;
+    }
+
+    [data-aos] {
+      opacity: 0;
+      transition-property: opacity, transform;
+    }
+
+    [data-aos].aos-animate {
+      opacity: 1;
+    }
+
+    .navbar {
+      background-color: rgba(255,255,255,0.9);
+    }
+
+    #wishesList .list-group-item {
+      background: rgba(255,255,255,0.8);
+    }
+
+    footer {
+      background-color: #fff0f5;
+      font-weight: bold;
+      transition: background 0.5s ease;
+    }
+
+    footer:hover {
+      background-color: #ffe6f2;
+    }
+  </style>
 </head>
 <body>
 
@@ -21,7 +129,8 @@
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Joylyn's Gift</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
@@ -37,9 +146,9 @@
 
   <!-- Hero Section -->
   <section id="home" class="hero" data-aos="fade">
-    <div class="text-center hero-text">
-      <h1>Late Happy Birthday Ms Joylyn 🥰💕</h1>
-      <h2>Finally escaped the teen drama 😂😂</h2>
+    <div class="container text-center hero-text">
+      <h1>Happy Birthday Ms Joylyn 🥰💕</h1>
+      <h2>Escaping the teen drama 😂😂</h2>
     </div>
   </section>
 
@@ -50,25 +159,25 @@
       <div class="gallery-grid">
         <div class="card-grid-item item-small" data-aos="zoom-in">
           <div class="card-image">
-            <img src="Jolly1.jpeg" alt="Jolly" />
+            <img src="Jolly1.jpeg" alt="Joylyn Smiling" />
             <div class="overlay"><p>Jolly</p></div>
           </div>
         </div>
         <div class="card-grid-item item-large" data-aos="zoom-in" data-aos-delay="100">
           <div class="card-image">
-            <img src="Jolly3.jpeg" alt="Jolly" />
+            <img src="Jolly3.jpeg" alt="Joylyn in the sun" />
             <div class="overlay"><p>Jolly</p></div>
           </div>
         </div>
         <div class="card-grid-item item-medium" data-aos="zoom-in" data-aos-delay="200">
           <div class="card-image">
-            <img src="Jolly2.jpeg" alt="Jolly" />
+            <img src="Jolly2.jpeg" alt="Joylyn Laughing" />
             <div class="overlay"><p>Jolly</p></div>
           </div>
         </div>
         <div class="card-grid-item item-medium" data-aos="zoom-in" data-aos-delay="300">
           <div class="card-image">
-            <img src="Jolly4.jpeg" alt="Jolly" />
+            <img src="Jolly4.jpeg" alt="Joylyn posing" />
             <div class="overlay"><p>Jolly</p></div>
           </div>
         </div>
@@ -106,25 +215,25 @@
       <div class="gallery-grid">
         <div class="card-grid-item item-medium" data-aos="zoom-in" data-aos-delay="200">
           <div class="card-image">
-            <img src="Memory2.jpeg" alt="Cheeky Us" />
+            <img src="Memory2.jpeg" alt="Busy Joylyn" />
             <div class="overlay"><p>Always busy😂</p></div>
           </div>
         </div>
         <div class="card-grid-item item-medium" data-aos="zoom-in" data-aos-delay="300">
           <div class="card-image">
-            <img src="Memory1.jpeg" alt="Cheeky Us" />
+            <img src="Memory1.jpeg" alt="Heartfelt Moment" />
             <div class="overlay"><p>Broke me first💔</p></div>
           </div>
         </div>
         <div class="card-grid-item item-small" data-aos="zoom-in" data-aos-delay="400">
           <div class="card-image">
-            <img src="Memory3.jpeg" alt="Cheeky Us" />
+            <img src="Memory3.jpeg" alt="Funny Joylyn Moment" />
             <div class="overlay"><p>Crazy Gal😜</p></div>
           </div>
         </div>
         <div class="card-grid-item item-large" data-aos="zoom-in" data-aos-delay="500">
           <div class="card-image">
-            <img src="Memory4.jpeg" alt="Cheeky Us" />
+            <img src="Memory4.jpeg" alt="Joylyn laughing hard" />
             <div class="overlay"><p>Fungua roho😂</p></div>
           </div>
         </div>
@@ -132,18 +241,6 @@
     </div>
   </section>
 
-  
-<!-- Laptop Theft Section -->
-  <section class="laptop-theft" data-aos="fade-up">
-    <div class="theft-content">
-      <h2>Weuh😪😪</h2>
-      <p>
-        My laptop kinda got lost the week to your birthday, which caused a major disruption in this small though not tangiable present but one that reflects how much dear🖤🌹 you are to me. 
-        Despite all that I’ve worked recovered it😩 Thank you for your patience 🙏🏽Sasa tu ni physical gift yako imebakia🎁🎁
-      </p>
-    </div>
-  </section>
-  
   <!-- Footer -->
   <footer class="py-3 text-center">
     <small>&copy; Sir BM</small>
@@ -152,6 +249,11 @@
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script src="MsJoy.js"></script>
+  <script>
+    AOS.init();
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    };
+  </script>
 </body>
 </html>
