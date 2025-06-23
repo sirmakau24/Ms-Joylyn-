@@ -16,7 +16,6 @@
 
   <!-- Inline CSS -->
   <style>
-    /* Base */
     body {
       font-family: 'Poppins', sans-serif;
       scroll-behavior: smooth;
@@ -24,7 +23,6 @@
       padding-top: 56px;
     }
 
-    /* Hero */
     .hero {
       height: 85vh;
       display: flex;
@@ -32,23 +30,23 @@
       justify-content: center;
       text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
     }
+
     .hero h1 {
       color: #fff;
       font-family: 'Great Vibes', cursive;
-      font-size: 5rem;
+      font-size: clamp(2.5rem, 6vw, 5rem);
     }
+
     .hero h2 {
       color: #fff;
       font-family: cursive;
-      font-size: 2rem;
+      font-size: clamp(1rem, 3vw, 2rem);
     }
 
-    /* Section backgrounds */
     .bg-soft-pink {
       background-color: #ffe4e1;
     }
 
-    /* Masonry-style gallery grid */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -57,12 +55,10 @@
       gap: 1rem;
     }
 
-    /* Variable card sizes */
     .item-small  { grid-row: span 1; grid-column: span 1; }
     .item-medium { grid-row: span 2; grid-column: span 1; }
     .item-large  { grid-row: span 2; grid-column: span 2; }
 
-    /* Card image container */
     .card-image {
       position: relative;
       overflow: hidden;
@@ -70,11 +66,11 @@
       transform: rotate(calc((var(--i,0) - 2) * 2deg));
       transition: transform 0.3s ease;
     }
+
     .card-image:hover {
       transform: scale(1.03) rotate(0);
     }
 
-    /* Responsive images */
     .card-image img {
       width: 100%;
       height: 100%;
@@ -83,7 +79,6 @@
       display: block;
     }
 
-    /* Overlay on hover */
     .overlay {
       position: absolute;
       inset: 0;
@@ -95,25 +90,24 @@
       justify-content: center;
       transition: opacity 0.3s ease;
     }
+
     .card-image:hover .overlay {
       opacity: 1;
     }
 
-    /* AOS fade-in */
     [data-aos] {
       opacity: 0;
       transition-property: opacity, transform;
     }
+
     [data-aos].aos-animate {
       opacity: 1;
     }
 
-    /* Navbar override */
     .navbar {
       background-color: rgba(255,255,255,0.9);
     }
 
-    /* Form and list-group tweaks */
     #wishesList .list-group-item {
       background: rgba(255,255,255,0.8);
     }
@@ -121,6 +115,11 @@
     footer {
       background-color: #fff0f5;
       font-weight: bold;
+      transition: background 0.5s ease;
+    }
+
+    footer:hover {
+      background-color: #ffe6f2;
     }
   </style>
 </head>
@@ -130,7 +129,8 @@
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Joylyn's Gift</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
@@ -146,7 +146,7 @@
 
   <!-- Hero Section -->
   <section id="home" class="hero" data-aos="fade">
-    <div class="text-center hero-text">
+    <div class="container text-center hero-text">
       <h1>Happy Birthday Ms Joylyn 🥰💕</h1>
       <h2>Escaping the teen drama 😂😂</h2>
     </div>
@@ -159,25 +159,25 @@
       <div class="gallery-grid">
         <div class="card-grid-item item-small" data-aos="zoom-in">
           <div class="card-image">
-            <img src="Jolly1.jpeg" alt="Jolly" />
+            <img src="Jolly1.jpeg" alt="Joylyn Smiling" />
             <div class="overlay"><p>Jolly</p></div>
           </div>
         </div>
         <div class="card-grid-item item-large" data-aos="zoom-in" data-aos-delay="100">
           <div class="card-image">
-            <img src="Jolly3.jpeg" alt="Jolly" />
+            <img src="Jolly3.jpeg" alt="Joylyn in the sun" />
             <div class="overlay"><p>Jolly</p></div>
           </div>
         </div>
         <div class="card-grid-item item-medium" data-aos="zoom-in" data-aos-delay="200">
           <div class="card-image">
-            <img src="Jolly2.jpeg" alt="Jolly" />
+            <img src="Jolly2.jpeg" alt="Joylyn Laughing" />
             <div class="overlay"><p>Jolly</p></div>
           </div>
         </div>
         <div class="card-grid-item item-medium" data-aos="zoom-in" data-aos-delay="300">
           <div class="card-image">
-            <img src="Jolly4.jpeg" alt="Jolly" />
+            <img src="Jolly4.jpeg" alt="Joylyn posing" />
             <div class="overlay"><p>Jolly</p></div>
           </div>
         </div>
@@ -215,25 +215,25 @@
       <div class="gallery-grid">
         <div class="card-grid-item item-medium" data-aos="zoom-in" data-aos-delay="200">
           <div class="card-image">
-            <img src="Memory2.jpeg" alt="Cheeky Us" />
+            <img src="Memory2.jpeg" alt="Busy Joylyn" />
             <div class="overlay"><p>Always busy😂</p></div>
           </div>
         </div>
         <div class="card-grid-item item-medium" data-aos="zoom-in" data-aos-delay="300">
           <div class="card-image">
-            <img src="Memory1.jpeg" alt="Cheeky Us" />
+            <img src="Memory1.jpeg" alt="Heartfelt Moment" />
             <div class="overlay"><p>Broke me first💔</p></div>
           </div>
         </div>
         <div class="card-grid-item item-small" data-aos="zoom-in" data-aos-delay="400">
           <div class="card-image">
-            <img src="Memory1.jpeg" alt="Cheeky Us" />
+            <img src="Memory3.jpeg" alt="Funny Joylyn Moment" />
             <div class="overlay"><p>Crazy Gal😜</p></div>
           </div>
         </div>
         <div class="card-grid-item item-large" data-aos="zoom-in" data-aos-delay="500">
           <div class="card-image">
-            <img src="Memory4.jpeg" alt="Cheeky Us" />
+            <img src="Memory4.jpeg" alt="Joylyn laughing hard" />
             <div class="overlay"><p>Fungua roho😂</p></div>
           </div>
         </div>
@@ -250,10 +250,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    // AOS initialization
     AOS.init();
-
-    // Optional: Scroll to top on reload
     window.onbeforeunload = function () {
       window.scrollTo(0, 0);
     };
