@@ -99,21 +99,43 @@ body {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Laptop Theft Section */
+/* Laptop Theft Section - Stylish Sheng + English */
 .laptop-theft {
-  background: #f9f9f9;
-  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #ffe6f0, #fefefe);
+  padding: 4rem 2rem;
   text-align: center;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  overflow: hidden;
 }
+
+.laptop-theft::before {
+  content: "⚠️";
+  font-size: 8rem;
+  opacity: 0.05;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+}
+
 .laptop-theft h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
   margin-bottom: 1rem;
-  font-size: 1.8rem;
+  color: #d80d80;
+  text-shadow: 1px 1px 0 #fff;
 }
+
 .laptop-theft p {
-  font-size: 1rem;
-  max-width: 600px;
+  font-size: 1.15rem;
+  max-width: 800px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.8;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
 /* Footer */
